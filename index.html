@@ -1,0 +1,131 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300|Ubuntu:700" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script>
+$(document).ready(function(){
+ var today = new Date();
+ var day = today.getDate();
+ var month = today.getMonth()+1;
+ var prompts = ["August 2018 hypergraphia emporium", 
+ "inhuman users",
+ "unconventional recruitment methods",
+ "interfacing with deities",
+ "non-financial micropayments",
+ "[prefix]nymity",
+ "synesthetic identities",
+ "witch-hunts as a service",
+ "device-dependent access",
+ "the meta-network",
+ "interplanetary friendships",
+ "turing testing the users",
+ "e-cemeteries",
+ "neurohacking IS the product",
+ "transitive blocking",
+ "user interface in flux",
+ "labyrinthine terms and conditions",
+ "permadeath as a feature, not a bug",
+ "extremophile communities",
+ "true evil",
+ "non-positive 'like' mechanisms",
+ "structurally subsuming individuality",
+ "structurally maximizing individuality",
+ "constrained characters",
+ "are you there NSA? it's me, Margaret",
+ "messaging roulette",
+ "factions at war",
+ "not safe for X",
+ "arcane login process",
+ "infrequent availability",
+ "once you're here, you can never leave",
+ "Thanks for playing"];
+ var index = day;
+
+ // Display initial date
+ if(month == 8){
+  $('#prompt').text(prompts[index]);
+  $('#index').text(index + ": ");}
+ else {
+  $('#prompt').text(prompts[0]);
+    index = 0;}
+ 
+ // Left and right nav
+ $('#left').click(function(){
+  $('#prompt').text(prompts[index <= 0 ? 0 : --index]);
+  $('#index').text(index <= 0 ? "" : index + ": ");});
+
+ $('#right').click(function(){
+  $('#prompt').text(prompts[index >= 31 ? 31 : ++index]);
+  $('#index').text(index >= 31 ? "" : index + ": ");});
+})
+</script>
+<style>
+    body {
+        margin: 0;
+    }
+    span{
+        margin: 5px;
+    }
+    #main {
+        padding-top: 150px;
+        height: 100%;
+        width: 700px;
+        margin: 0 auto;
+        background-color: black;
+    }
+    #prompt {
+        display: inline-block;
+        width: 500px;
+    }
+    #index {
+        position: absolute;
+        top: 220px;
+        display: inline-block;
+        width: 40px;
+        margin-left: 35px;
+    }
+    #title {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 35;
+        color: black;
+        font-weight: 900;
+        text-shadow: -1.5px -1.5px white;
+        transform: scaleY(1.25);
+        transform: skewX(20deg);
+        position: absolute;
+        top: 145px;
+        left: 600px;
+    }
+    #left, #right{
+        position: absolute;
+        top: 220px;
+        cursor: pointer;
+    }
+    .box{
+        font-family: 'IBM Plex Mono', monospace;
+        background-color: white;
+        padding: 50px 10px 50px 10px;
+        margin: 20px;
+        text-align: center;
+    }
+    ::selection{
+        background:transparent;
+    }
+</style>
+</head>
+<body>
+    <div id="main">
+        <div id="title">INVISIBLE NETWORKS</div>
+        <div class="box">
+            <span id="left">&lt;</span>
+            <span id="index"></span>
+            <span id="prompt"></span>
+            <span id="right">&gt;</span>
+    </div>
+        <div class="box"><p>Generate 30 social networks over the course of August.</p><br>
+            <p>Data-traps, ego marketplaces, the abysses in which we soak our minds; the internet has spawned forums without bodies, eternal masquerades, and conversations that exist outside of time. The Log, the Like, the View, the DM; a new pantheon, reinterpreted by every site, governs our interactions.</p>
+            <p>In your heart, you know you can do better than ZUCKERBERG, JACK, and the various e-tyrants. Use the above prompts as inspiration for your own digital social empires.</p>
+    </div>
+    </div>
+</body>
+</html>
