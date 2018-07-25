@@ -96,9 +96,12 @@ $(document).ready(function(){
         top: 145px;
         left: 600px;
     }
-    #left, #right{
+    #left, #right {
+		background: none;
+		border: none;
+		box-shadow: none;
         position: absolute;
-        top: 220px;
+        top: 230px;
         cursor: pointer;
     }
     .box{
@@ -117,10 +120,10 @@ $(document).ready(function(){
     <div id="main">
         <div id="title">INVISIBLE NETWORKS</div>
         <div class="box">
-            <span id="left">&lt;</span>
+            <button id="left">&lt;</button>
             <span id="index"></span>
             <span id="prompt"></span>
-            <span id="right">&gt;</span>
+            <button id="right">&gt;</button>
     </div>
         <div class="box"><p>Generate 30 social networks over the course of August.</p><br>
             <p>Data-traps, ego marketplaces, the abysses in which we soak our minds; the internet has spawned forums without bodies, eternal masquerades, and conversations that exist outside of time. The Log, the Like, the View, the DM; a new pantheon, reinterpreted by every site, governs our interactions.</p>
